@@ -13,6 +13,7 @@ class CreateScore(APIView):#post임
 
     def post(self,request):
         score=Score()
+        print()
         score.test_type = request.data.get('test_type', score.test_type)
         score.save()
         score_serializer=TestIdSerializer(score)
